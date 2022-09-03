@@ -18,14 +18,14 @@ class BooksController < ApplicationController
   end
   
   def show
-    @book = Bo.find(params[:id])  
+    @book = Book.find(params[:id])  
   end
 
   def edit
   end
   
   def destroy
-     book = Book.find(params[:id])  
+    book = Book.find(params[:id])  
     book.destroy  
     redirect_to '/books'
   end
